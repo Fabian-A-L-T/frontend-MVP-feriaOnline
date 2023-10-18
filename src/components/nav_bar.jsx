@@ -1,21 +1,42 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import FESW_Logo from '../assets/fesw-logo.png'
 
 export const NavBar = () => {
   return (
     <nav className='nav-bar'>
       <NavLink
-        className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
+        className='nav-bar__logo'
         to='/'
       >
-        Página de inicio
+        <img src={FESW_Logo} alt='logo usm' /><br />
       </NavLink>
-      <NavLink
-        className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
-        to='/internal'
-      >
-        Página Interna
-      </NavLink>
+      
+        <NavLink
+          className={({ isActive }) => `nav-bar__right-links ${isActive ? 'nav-bar__right-links--active' : ''}`}
+          to='/proyectos'
+        >
+          <p>Proyectos</p>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => `nav-bar__right-links ${isActive ? 'nav-bar__right-links--active' : ''}`}
+          to='/mensajes'
+        >
+          <p>Mensajes</p>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => `nav-bar__right-links ${isActive ? 'nav-bar__right-links--active' : ''}`}
+          to='/itinerario'
+        >
+          <p>Itinerario</p>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => `nav-bar__right-links ${isActive ? 'nav-bar__right-links--active' : ''}`}
+          to='/transmision'
+        >
+          <p>Transmision</p>
+        </NavLink>
+      
     </nav>
   )
 }
