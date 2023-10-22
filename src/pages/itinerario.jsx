@@ -1,16 +1,25 @@
 import React from 'react';
 import NavBar from '../components/nav_bar';
-import '../stylesheets/ItinerarioPage.css'; // Importa el archivo SCSS
+import '../stylesheets/ItinerarioPage.css'; 
 
 const ItinerarioPage = () => {
   const itinerario = [
     { tipo: 'Charla', hora: '08:00 AM', link: 'https://ejemplo.com/Charla' , color: 'yellow'},
     { tipo: 'Taller', hora: '10:00 AM', link: 'https://ejemplo.com/Taller' , color: 'red'},
     { tipo: 'Livestream', hora: '01:00 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
-    // Agrega más elementos según sea necesario
+    { tipo: 'Livestream', hora: '01:30 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
+    { tipo: 'Livestream', hora: '02:00 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
+    { tipo: 'Charla', hora: '02:00 PM', link: 'https://ejemplo.com/Charla' , color: 'yellow'},
+    { tipo: 'Taller', hora: '02:30 PM', link: 'https://ejemplo.com/Taller' , color: 'red'},
+    { tipo: 'Livestream', hora: '03:00 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
+    { tipo: 'Livestream', hora: '03:30 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
+    { tipo: 'Charla', hora: '03:30 PM', link: 'https://ejemplo.com/Charla' , color: 'yellow'},
+    { tipo: 'Taller', hora: '04:00 PM', link: 'https://ejemplo.com/Taller' , color: 'red'},
+    { tipo: 'Livestream', hora: '04:30 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
+
   ];
 
-  // Función para generar la tabla JSX
+  
   const generarTabla = () => {
     return (
       <table className="centered-table">
