@@ -1,11 +1,4 @@
-import React, { useState } from 'react';
-import projectData from '../assets/data.json';
-import NavBar from '../components/nav_bar'
-import projectShow from '../components/projectShow';
-
-export default function ProyectosPage(){
-
-  var data = {
+{
     "Projects":[
         {
             "softwareName": "algo",
@@ -43,18 +36,4 @@ export default function ProyectosPage(){
             "favCounter": 26
         }
     ]
-}
-  var dataList = data.Projects
-  dataList.sort((a, b) => (a.favCounter < b.favCounter) ? 1 : -1)
-
-  const [projectList, setProjectList] = useState(dataList);
-
-  return (
-    <div className='page'>
-      <NavBar />
-      <h1 className='page__title'>Proyectos</h1>
-      <h2>Buscar</h2>
-      {projectShow(dataList)}
-    </div>
-  )
 }

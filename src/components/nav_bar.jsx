@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import FESW_Logo from '../assets/fesw-logo.png'
 
 export const NavBar = () => {
   return (
@@ -9,7 +8,7 @@ export const NavBar = () => {
         className='nav-bar__logo'
         to='/'
       >
-        <img src={FESW_Logo} alt='logo usm' /><br />
+        <img src={"/fesw-logo.png"} alt='logo usm' /><br />
       </NavLink>
       
         <NavLink
