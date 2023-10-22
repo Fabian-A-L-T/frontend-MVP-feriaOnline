@@ -1,0 +1,45 @@
+.centered-table {
+  max-width: 100%; // Ancho máximo del contenedor
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0 10px; // Espaciado vertical de 10px, sin espaciado horizontal
+
+  th, td {
+    padding: 10px; // Ajusta el valor según la separación que desees
+    text-align: center;
+    white-space: nowrap; // Evita el corte de palabras
+  }
+
+  tr:first-child {
+    border-spacing: 10px 10px; // Espaciado horizontal y vertical de 10px solo para la primera fila
+  }
+
+  tr:last-child {
+    border-spacing: 10px 10px; // Espaciado horizontal y vertical de 10px solo para la última fila
+  }
+}
+
+
+
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+tr[data-color='blue'] {
+  background-color: rgb(91, 91, 239);
+  color: white;
+}
+
+tr[data-color='green'] {
+  background-color: green;
+  color: white;
+}
+
+tr[data-color='red'] {
+  background-color: red;
+  color: white;
+}
