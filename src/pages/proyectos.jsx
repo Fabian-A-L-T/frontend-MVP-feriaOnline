@@ -74,7 +74,9 @@ export default function ProyectosPage(){
     <div className='page'>
       <NavBar />
       <h1 className='page__title'>Proyectos</h1>
-      <div>
+      <div style={{ display: 'flex', width: '100%' }}>
+        <div style={{ flex: '5%' }}>
+        <div style={{ marginLeft: '30%' }}>
       <h2>Buscar</h2>
       <select value={selectedTags} onChange={handleTagChange}>
         <option value="">Todos</option>
@@ -84,8 +86,15 @@ export default function ProyectosPage(){
           </option>
         ))}
       </select>
-      </div>
-      {projectShow(projectList)}
+    </div>
+  </div>
+  <div style={{ flex: '90%' }}>
+    {projectShow(projectList)}
+  </div>
+  <div style={{ flex: '5%' }}>
+
+  </div>
+</div>
     </div>
   )
 }
