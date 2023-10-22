@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../components/nav_bar';
-import '../stylesheets/ItinerarioPage.css'; 
+import '../stylesheets/ItinerarioPage.css';
 
 const ItinerarioPage = () => {
-  const itinerario = [
+  const itinerarioOriginal = [
     { tipo: 'Charla', hora: '08:00 AM', link: 'https://ejemplo.com/Charla' , color: 'yellow'},
     { tipo: 'Taller', hora: '10:00 AM', link: 'https://ejemplo.com/Taller' , color: 'red'},
     { tipo: 'Livestream', hora: '01:00 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
@@ -19,7 +19,20 @@ const ItinerarioPage = () => {
 
   ];
 
-  
+  const [tipoSeleccionado, setTipoSeleccionado] = useState(null);
+  const [datosFiltrados, setDatosFiltrados] = useState([...itinerarioOriginal]);
+
+  useEffect(() => {
+    // Filtrar los datos cuando cambie el tipo seleccionado
+    if (tipoSeleccionado) {
+      const filtrados = itinerarioOriginal.filter(item => item.tipo === tipoSeleccionado);
+      setDatosFiltrados(filtrados);
+    } else {
+      // Si no se ha seleccionado ningún tipo, mostrar todos los datos
+      setDatosFiltrados([...itinerarioOriginal]);
+    }
+  }, [tipoSeleccionado]);
+
   const generarTabla = () => {
     return (
       <table className="centered-table">
@@ -31,8 +44,7 @@ const ItinerarioPage = () => {
           </tr>
         </thead>
         <tbody>
-          {itinerario.map((item, index) => (
-            
+          {datosFiltrados.map((item, index) => (
             <tr key={index} style={{ backgroundColor: item.color }}>
               <td>{item.tipo}</td>
               <td>{item.hora}</td>
@@ -50,6 +62,17 @@ const ItinerarioPage = () => {
     <div className='page'>
       <NavBar />
       <h1 className='page__title'>Itinerario</h1>
+      <label htmlFor="tipoSelector">Filtrar por tipo: </label>
+      <select
+        id="tipoSelector"
+        value={tipoSeleccionado || ''}
+        onChange={(e) => setTipoSeleccionado(e.target.value || null)}
+      >
+        <option value="">Mostrar todos</option>
+        <option value="Charla">Charla</option>
+        <option value="Taller">Taller</option>
+        <option value="Livestream">Livestream</option>
+      </select>
       {generarTabla()}
     </div>
   );
