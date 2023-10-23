@@ -4,31 +4,35 @@ import '../stylesheets/ItinerarioPage.css';
 
 const ItinerarioPage = () => {
   const itinerarioOriginal = [
-    { tipo: 'Charla medioambiente', hora: '08:00 AM', link: 'https://zoomo.com/CHarL4M34Mb13' , color: 'yellow'},
-    { tipo: 'Taller robótica', hora: '10:00 AM', link: 'https://zoomo.com/T41135R0bo7' , color: 'red'},
-    { tipo: 'Livestream tidesense', hora: '01:00 PM', link: 'https://zoomo.com/LiveT1d3' , color: "lightblue"},
-    { tipo: 'Livestream noisetrack', hora: '01:30 PM', link: 'https://zoomo.com/LiveN0153' , color: "lightblue"},
-    { tipo: 'Livestream anima', hora: '02:00 PM', link: 'https://zoomo.com/Live4N1m4' , color: "lightblue"},
-    { tipo: 'Charla equidad de género', hora: '02:00 PM', link: 'https://zoomo.com/Charl3q1G3n' , color: 'yellow'},
-    { tipo: 'Taller arduino', hora: '02:30 PM', link: 'https://zoomo.com/R2D2' , color: 'red'},
-    { tipo: 'Livestream ar-go', hora: '03:00 PM', link: 'https://zoomo.com/Live4rG0NaU7' , color: "lightblue"},
-    { tipo: 'Charla Redes Neuronales aplicadas', hora: '03:30 PM', link: 'https://zoomo.com/B1B1B00P?' , color: 'yellow'},
-    { tipo: 'Taller física electronica', hora: '04:00 PM', link: 'https://zoomo.com/31n57e1N07D34d' , color: 'red'},
-    { tipo: 'Livestream cusinear', hora: '04:30 PM', link: 'https://zoomo.com/LiveR474tui11e' , color: "lightblue"},
-    { tipo: 'Livestream safesym', hora: '05:30 PM', link: 'https://zoomo.com/LiveS4f3Sym' , color: "lightblue"},
+    { tipo: 'Charla medioambiente', hora: '08:00 AM', link: 'https://zoomo.com/CHarL4M34Mb13' , color: 'yellow', tag: 'Charla'},
+    { tipo: 'Taller robótica', hora: '10:00 AM', link: 'https://zoomo.com/T41135R0bo7' , color: 'red', tag: 'Taller'},
+    { tipo: 'Livestream tidesense', hora: '01:00 PM', link: 'https://zoomo.com/LiveT1d3' , color: "lightblue", tag: 'Livestream'},
+    { tipo: 'Livestream noisetrack', hora: '01:30 PM', link: 'https://zoomo.com/LiveN0153' , color: "lightblue", tag: 'Livestream'},
+    { tipo: 'Livestream anima', hora: '02:00 PM', link: 'https://zoomo.com/Live4N1m4' , color: "lightblue", tag: 'Livestream'},
+    { tipo: 'Charla equidad de género', hora: '02:00 PM', link: 'https://zoomo.com/Charl3q1G3n' , color: 'yellow', tag: 'Charla'},
+    { tipo: 'Taller arduino', hora: '02:30 PM', link: 'https://zoomo.com/R2D2' , color: 'red', tag: 'Taller'},
+    { tipo: 'Livestream ar-go', hora: '03:00 PM', link: 'https://zoomo.com/Live4rG0NaU7' , color: "lightblue", tag: 'Livestream'},
+    { tipo: 'Charla Redes Neuronales aplicadas', hora: '03:30 PM', link: 'https://zoomo.com/B1B1B00P?' , color: 'yellow', tag: 'Charla'},
+    { tipo: 'Taller física electronica', hora: '04:00 PM', link: 'https://zoomo.com/31n57e1N07D34d' , color: 'red', tag: 'Taller'},
+    { tipo: 'Livestream cusinear', hora: '04:30 PM', link: 'https://zoomo.com/LiveR474tui11e' , color: "lightblue", tag: 'Livestream'},
+    { tipo: 'Livestream safesym', hora: '05:30 PM', link: 'https://zoomo.com/LiveS4f3Sym' , color: "lightblue", tag: 'Livestream'},
 
   ];
 
   const [tipoSeleccionado, setTipoSeleccionado] = useState(null);
   const [datosFiltrados, setDatosFiltrados] = useState([...itinerarioOriginal]);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    // Filtrar los datos cuando cambie el tipo seleccionado
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
     if (tipoSeleccionado) {
-      const filtrados = itinerarioOriginal.filter(item => item.tipo === tipoSeleccionado);
+      const filtrados = itinerarioOriginal.filter(item => item.tag === tipoSeleccionado);
       setDatosFiltrados(filtrados);
     } else {
-      // Si no se ha seleccionado ningún tipo, mostrar todos los datos
       setDatosFiltrados([...itinerarioOriginal]);
     }
   }, [tipoSeleccionado]);
@@ -69,7 +73,13 @@ const ItinerarioPage = () => {
           <select
             id="tipoSelector"
             value={tipoSeleccionado || ''}
-            onChange={(e) => setTipoSeleccionado(e.target.value || null)}
+            onChange={(e) => {
+              setLoading(true); 
+              setTipoSeleccionado(e.target.value || null);
+              setTimeout(() => {
+                setLoading(false);
+              }, 1000);
+            }}
           >
             <option value="">Mostrar todos</option>
             <option value="Charla">Charla</option>
@@ -79,7 +89,13 @@ const ItinerarioPage = () => {
         </div>
       </div>
         <div style={{ flex: '80%' }}>
-      {generarTabla()}
+        {loading ? (
+            <div className="loading-overlay">
+            <div className="loading-text">Buscando...</div>
+          </div>
+          ) : (
+            generarTabla()
+          )}
       </div>
       <div style={{ flex: '10%' }}>
         </div>
