@@ -12,7 +12,6 @@ const ItinerarioPage = () => {
     { tipo: 'Charla equidad de género', hora: '02:00 PM', link: 'https://zoomo.com/Charl3q1G3n' , color: 'yellow'},
     { tipo: 'Taller arduino', hora: '02:30 PM', link: 'https://zoomo.com/R2D2' , color: 'red'},
     { tipo: 'Livestream ar-go', hora: '03:00 PM', link: 'https://zoomo.com/Live4rG0NaU7' , color: "lightblue"},
-    { tipo: 'Livestream muvec', hora: '03:30 PM', link: 'https://zoomo.com/LiveMuv3' , color: "lightblue"},
     { tipo: 'Charla Redes Neuronales aplicadas', hora: '03:30 PM', link: 'https://zoomo.com/B1B1B00P?' , color: 'yellow'},
     { tipo: 'Taller física electronica', hora: '04:00 PM', link: 'https://zoomo.com/31n57e1N07D34d' , color: 'red'},
     { tipo: 'Livestream cusinear', hora: '04:30 PM', link: 'https://zoomo.com/LiveR474tui11e' , color: "lightblue"},
