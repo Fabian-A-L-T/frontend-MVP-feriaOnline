@@ -21,3 +21,6 @@ Estas personas nuevas se utilizaron para redefinir la hipótesis que antes tení
 -   Lograremos llamar la atención de Samuel si logra ver los proyectos más destacados mediante un sistema de votación de proyectos.
 
 La mayoría de las hipótesis son sobre el funcionamiento base de la aplicación. La principal tarea de esta aplicación es permitir a los usuarios encontrar proyectos que les interesen mediante el uso de las funcionalidades que la pagina ofrece, como filtración de proyectos por etiquetas, el itinerario del evento y actividades.
+
+# Video #
+https://youtu.be/hvt4ez862v4
