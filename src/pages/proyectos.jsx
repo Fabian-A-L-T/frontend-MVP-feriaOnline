@@ -12,24 +12,25 @@ export default function ProyectosPage(){
   const [projectList, setProjectList] = useState(dataList);
 
   const [uniqueTags, setUniqueTags] = useState([]);
-  const [selectedTags, setSelectedTags] = useState("");
+  const [selectedTag, setSelectedTag] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const allTags = dataList.flatMap((project) => project.tags);
-    const uniqueTags = Array.from(new Set(allTags));
-    setUniqueTags(uniqueTags);
+    setLoading(true);
+    setTimeout(() => {
+      const allTags = projectList.flatMap((product) => product.tags);
+      const uniqueTags = Array.from(new Set(allTags));
+      setUniqueTags(uniqueTags);
+      setLoading(false);
+    }, 1000);
   }, []);
 
   const handleTagChange = (event) => {
-    setSelectedTags(event.target.value);
-    if (event.target.value === "") {
-      setProjectList(dataList);
-    } else {
-      const filteredProjects = dataList.filter((project) =>
-        project.tags.includes(event.target.value)
-      );
-      setProjectList(filteredProjects);
-    }
+    setLoading(true); // Set loading state to true
+    setSelectedTag(event.target.value);
+    setTimeout(() => {
+      setLoading(false); // Set loading state to false after processing the tag change
+    }, 1000); // Simulate a 1-second loading time
   };
 
   return (
@@ -40,10 +41,10 @@ export default function ProyectosPage(){
         <div style={{ flex: '5%' }}>
         <div style={{ marginLeft: '30%' }}>
       <h2>Buscar</h2>
-      <select value={selectedTags} onChange={handleTagChange}>
-        <option value="">Todos</option>
-        {uniqueTags.map((tag) => (
-          <option key={tag} value={tag}>
+      <select value={selectedTag} onChange={handleTagChange}>
+        <option value="">All</option>
+        {uniqueTags.map((tag, index) => (
+          <option key={index} value={tag}>
             {tag}
           </option>
         ))}
@@ -51,7 +52,11 @@ export default function ProyectosPage(){
     </div>
   </div>
   <div style={{ flex: '90%' }}>
-    {projectShow(projectList)}
+    {loading ? (
+      <div>Loading...</div>
+    ) : (
+      projectShow(projectList)
+    )}
   </div>
   <div style={{ flex: '5%' }}>
 
