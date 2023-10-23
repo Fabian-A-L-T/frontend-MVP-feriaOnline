@@ -1,39 +1,53 @@
 {
     "Projects":[
         {
-            "softwareName": "algo",
-            "teamName": "test 1",
-            "tags": ["IA","IoT"],
-            "img": "/fesw-logo.png",
-            "favCounter": 12
-        },
-        {
-            "softwareName": "algo 1",
-            "teamName": "test 2",
-            "tags": ["Seguridad"],
-            "img": "/usm.png",
-            "favCounter": 8
-        },
-        {
-            "softwareName": "algo 2",
-            "teamName": "test 3",
-            "tags": ["Diseño", "3D"],
-            "img": "/fesw-logo.png",
-            "favCounter": 2
-        },
-        {
-            "softwareName": "algo 3",
-            "teamName": "test 4",
-            "tags": ["IA"],
-            "img": "/usm.png",
+            "softwareName": "Anima",
+            "teamName": "IkiGaze",
+            "tags": ["IA","Animacion 3D"],
+            "img": "/anima.gif",
             "favCounter": 19
         },
         {
-            "softwareName": "algo 4",
-            "teamName": "test 5",
-            "tags": ["IoT"],
-            "img": "/fesw-logo.png",
+            "softwareName": "NoiseTrack",
+            "teamName": "Roku6its",
+            "tags": ["IA", "Salud y bienestar"],
+            "img": "/noisetrack.png",
+            "favCounter": 19
+        },
+        {
+            "softwareName": "Tidesense",
+            "teamName": "TechKi",
+            "tags": ["IoT", "IA"],
+            "img": "/tidesense.png",
+            "favCounter": 28
+        },
+        {
+            "softwareName": "AR-GO",
+            "teamName": "DACE",
+            "tags": ["Realidad aumentada", "Educacion"],
+            "img": "/argo.png",
+            "favCounter": 21
+        },
+        {
+            "softwareName": "Cusine-AR",
+            "teamName": "Dreamterprise",
+            "tags": ["Realidad aumentada", "Educacion"],
+            "img": "/cusinear.png",
             "favCounter": 26
+        },
+        {
+            "softwareName": "GUI-AR",
+            "teamName": "DRK-Tech",
+            "tags": ["Realidad aumentada", "Localizacion"],
+            "img": "/guiar.png",
+            "favCounter": 25
+        },
+        {
+            "softwareName": "SafeSym",
+            "teamName": "OneBlit",
+            "tags": ["Ciberseguridad", "Educacion"],
+            "img": "/safesym.png",
+            "favCounter": 24
         }
     ]
 }
