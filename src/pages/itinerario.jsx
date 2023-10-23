@@ -62,18 +62,28 @@ const ItinerarioPage = () => {
     <div className='page'>
       <NavBar />
       <h1 className='page__title'>Itinerario</h1>
-      <label htmlFor="tipoSelector">Filtrar por tipo: </label>
-      <select
-        id="tipoSelector"
-        value={tipoSeleccionado || ''}
-        onChange={(e) => setTipoSeleccionado(e.target.value || null)}
-      >
-        <option value="">Mostrar todos</option>
-        <option value="Charla">Charla</option>
-        <option value="Taller">Taller</option>
-        <option value="Livestream">Livestream</option>
-      </select>
+        <div style={{ display: 'flex', width: '100%' }}>
+          <div style={{ flex: '10%' }}>
+          <div style={{ marginLeft: '30%' }}>
+          <h2>Filtrar</h2>
+          <select
+            id="tipoSelector"
+            value={tipoSeleccionado || ''}
+            onChange={(e) => setTipoSeleccionado(e.target.value || null)}
+          >
+            <option value="">Mostrar todos</option>
+            <option value="Charla">Charla</option>
+            <option value="Taller">Taller</option>
+            <option value="Livestream">Livestream</option>
+        </select>
+        </div>
+      </div>
+        <div style={{ flex: '80%' }}>
       {generarTabla()}
+      </div>
+      <div style={{ flex: '10%' }}>
+        </div>
+    </div>
     </div>
   );
 };
