@@ -4,18 +4,18 @@ import '../stylesheets/ItinerarioPage.css';
 
 const ItinerarioPage = () => {
   const itinerarioOriginal = [
-    { tipo: 'Charla', hora: '08:00 AM', link: 'https://ejemplo.com/Charla' , color: 'yellow'},
-    { tipo: 'Taller', hora: '10:00 AM', link: 'https://ejemplo.com/Taller' , color: 'red'},
-    { tipo: 'Livestream', hora: '01:00 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
-    { tipo: 'Livestream', hora: '01:30 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
-    { tipo: 'Livestream', hora: '02:00 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
-    { tipo: 'Charla', hora: '02:00 PM', link: 'https://ejemplo.com/Charla' , color: 'yellow'},
-    { tipo: 'Taller', hora: '02:30 PM', link: 'https://ejemplo.com/Taller' , color: 'red'},
-    { tipo: 'Livestream', hora: '03:00 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
-    { tipo: 'Livestream', hora: '03:30 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
-    { tipo: 'Charla', hora: '03:30 PM', link: 'https://ejemplo.com/Charla' , color: 'yellow'},
-    { tipo: 'Taller', hora: '04:00 PM', link: 'https://ejemplo.com/Taller' , color: 'red'},
-    { tipo: 'Livestream', hora: '04:30 PM', link: 'https://ejemplo.com/Live' , color: "lightblue"},
+    { tipo: 'Charla medioambiente', hora: '08:00 AM', link: 'https://zoomo.com/CHarL4M34Mb13' , color: 'yellow'},
+    { tipo: 'Taller robótica', hora: '10:00 AM', link: 'https://zoomo.com/T41135R0bo7' , color: 'red'},
+    { tipo: 'Livestream tidesense', hora: '01:00 PM', link: 'https://zoomo.com/LiveT1d3' , color: "lightblue"},
+    { tipo: 'Livestream noisetrack', hora: '01:30 PM', link: 'https://zoomo.com/LiveN0153' , color: "lightblue"},
+    { tipo: 'Livestream anima', hora: '02:00 PM', link: 'https://zoomo.com/Live4N1m4' , color: "lightblue"},
+    { tipo: 'Charla equidad de género', hora: '02:00 PM', link: 'https://zoomo.com/Charl3q1G3n' , color: 'yellow'},
+    { tipo: 'Taller arduino', hora: '02:30 PM', link: 'https://zoomo.com/R2D2' , color: 'red'},
+    { tipo: 'Livestream ar-go', hora: '03:00 PM', link: 'https://zoomo.com/Live4rG0NaU7' , color: "lightblue"},
+    { tipo: 'Charla Redes Neuronales aplicadas', hora: '03:30 PM', link: 'https://zoomo.com/B1B1B00P?' , color: 'yellow'},
+    { tipo: 'Taller física electronica', hora: '04:00 PM', link: 'https://zoomo.com/31n57e1N07D34d' , color: 'red'},
+    { tipo: 'Livestream cusinear', hora: '04:30 PM', link: 'https://zoomo.com/LiveR474tui11e' , color: "lightblue"},
+    { tipo: 'Livestream safesym', hora: '05:30 PM', link: 'https://zoomo.com/LiveS4f3Sym' , color: "lightblue"},
 
   ];
 
