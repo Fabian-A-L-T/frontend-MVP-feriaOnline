@@ -19,12 +19,6 @@ export const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) => `nav-bar__right-links ${isActive ? 'nav-bar__right-links--active' : ''}`}
-          to='/mensajes'
-        >
-          <p>Mensajes</p>
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => `nav-bar__right-links ${isActive ? 'nav-bar__right-links--active' : ''}`}
           to='/itinerario'
         >
           <p>Itinerario</p>
