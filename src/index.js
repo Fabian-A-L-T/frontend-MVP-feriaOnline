@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 import AppRouter from './components/app_router'
 
 import './stylesheets/index.scss'
+
 
 const root = document.createElement('div')
 root.setAttribute('id', 'root')

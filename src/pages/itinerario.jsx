@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../components/nav_bar';
 import '../stylesheets/ItinerarioPage.css';
+import Footer from '../components/footer'
 
 const ItinerarioPage = () => {
   const itinerarioOriginal = [
@@ -99,7 +100,8 @@ const ItinerarioPage = () => {
       </div>
       <div style={{ flex: '10%' }}>
         </div>
-    </div>
+      </div>
+    <Footer/>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import projectData from '../assets/data.json';
 import NavBar from '../components/nav_bar'
 import projectShow from '../components/projectShow';
 import '../assets/ProyectosPage.css';
+import Footer from '../components/footer'
 
 export default function ProyectosPage() {
   var data = projectData;
@@ -67,6 +68,7 @@ export default function ProyectosPage() {
         </div>
         <div style={{ flex: '5%' }}></div>
       </div>
+      <Footer/>
     </div>
   );
 }
