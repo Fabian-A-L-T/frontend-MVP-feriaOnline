@@ -3,51 +3,62 @@
         {
             "softwareName": "Anima",
             "teamName": "IkiGaze",
+            "category": "Inteligencia Artificial",
             "tags": ["IA","Animacion 3D"],
             "img": "/anima.gif",
-            "favCounter": 19
+            "favCounter": 19,
+            "urlPage": "//anima.feriadesoftware.cl/",
+            "urlVideo": "//www.youtube.com/embed/eKTnMIuUGvw?si=FCL2kFqj9b8XSFz1"
         },
         {
             "softwareName": "NoiseTrack",
             "teamName": "Roku6its",
+            "category": "Inteligencia Artificial",
             "tags": ["IA", "Salud y bienestar"],
             "img": "/noisetrack.png",
-            "favCounter": 19
+            "favCounter": 19,
+            "urlPage": "//noisetrack.feriadesoftware.cl/",
+            "urlVideo": "//www.youtube.com/embed/FJO_6S0H8bQ?si=0pKYRxGgymROcMMx"
         },
         {
             "softwareName": "Tidesense",
             "teamName": "TechKi",
+            "category": "Inteligencia Artificial",
             "tags": ["IoT", "IA"],
             "img": "/tidesense.png",
-            "favCounter": 28
+            "favCounter": 28,
+            "urlPage": "//tidesense.feriadesoftware.cl/",
+            "urlVideo": "//www.youtube.com/embed/K-lMxQ8zgOA?si=JTT7W3OuGIuaSOk0"
         },
         {
             "softwareName": "AR-GO",
             "teamName": "DACE",
+            "category": "Realidad Virtual y Aumentada",
             "tags": ["Realidad aumentada", "Educacion"],
             "img": "/argo.png",
-            "favCounter": 21
+            "favCounter": 21,
+            "urlPage": "//ar-go.feriadesoftware.cl/index.html",
+            "urlVideo": "//www.youtube.com/embed/-v-_YCm94Es?si=vDJ1yFutmKdioDqT"
         },
         {
             "softwareName": "Cusine-AR",
             "teamName": "Dreamterprise",
+            "category": "Realidad Virtual y Aumentada",
             "tags": ["Realidad aumentada", "Educacion"],
             "img": "/cusinear.png",
-            "favCounter": 26
-        },
-        {
-            "softwareName": "GUI-AR",
-            "teamName": "DRK-Tech",
-            "tags": ["Realidad aumentada", "Localizacion"],
-            "img": "/guiar.png",
-            "favCounter": 25
+            "favCounter": 26,
+            "urlPage": "//cuisinear.feriadesoftware.cl/",
+            "urlVideo": "//www.youtube.com/embed/-GlK5AlnhLU?si=gu_jmPwjYiTQ0IXu"
         },
         {
             "softwareName": "SafeSym",
             "teamName": "OneBlit",
+            "category": "Tecnología en la Educación",
             "tags": ["Ciberseguridad", "Educacion"],
             "img": "/safesym.png",
-            "favCounter": 24
+            "favCounter": 24,
+            "urlPage": "//safesym.feriadesoftware.cl/",
+            "urlVideo": "//www.youtube.com/embed/cL3tRq_7qZc?si=DWmW3I__E0hXGPtC"
         }
     ]
 }

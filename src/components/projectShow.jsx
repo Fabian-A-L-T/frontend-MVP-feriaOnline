@@ -11,10 +11,13 @@ export const projectShow = (dataList) => {
             <ProjectContainer 
               softwareName={project.softwareName} 
               teamName={project.teamName} 
+              category={project.category}
               tags={project.tags} 
               img={project.img}
               counter={project.favCounter}
               key={project.softwareName}
+              urlPage={project.urlPage}
+              urlVideo={project.urlVideo}
             /> 
         )  
     )

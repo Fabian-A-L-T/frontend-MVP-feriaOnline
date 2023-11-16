@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 
 
-export const ProjectContainer = ({softwareName, teamName, tags, img, counter, url, pageLink}) => {
+export const ProjectContainer = ({softwareName, teamName, category, tags, img, counter, urlPage, urlVideo}) => {
 
     const [favCounter, setFavCounter] = useState(counter);
     const [flag, setFlag] = useState(true);
@@ -11,7 +11,7 @@ export const ProjectContainer = ({softwareName, teamName, tags, img, counter, ur
     return (
         <div className='project-container'>
             <div className='project-container-video'>
-                <iframe width={'auto'} height={'100%'} src="https://www.youtube.com/embed/" title="YouTube video player" frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width={'auto'} height={'100%'} src={urlVideo} title="YouTube video player" frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div className='project-container-info'>
                 <div className='project-container__names'>
@@ -20,8 +20,9 @@ export const ProjectContainer = ({softwareName, teamName, tags, img, counter, ur
                     </div>
                     <div className='project-container-name'>
                         <h2>{softwareName}</h2>
-                        <p>Creado por {teamName}</p>
-                        <p>Tags: {tags.map(
+                        <p style={{ color: '#111111' }}> Creado por {teamName}</p>
+                        <p style={{ fontSize: '0.9rem' }}>Categoria: {category}</p>
+                        <p style={{ fontSize: '0.9rem' }}>Tags: {tags.map(
                             function tagIterator(tag, i, {length}){
                                 return (
                                     tag + ((i + 1 === length) ? '' : ', ')
@@ -37,7 +38,7 @@ export const ProjectContainer = ({softwareName, teamName, tags, img, counter, ur
                     :   
                         <button onClick={() => {setFavCounter(favCounter => favCounter - 1); setFlag(true);counter -=1}} ><FontAwesomeIcon icon={faThumbsUp} color='#0062d9'/> {favCounter}</button>
                     }
-                    <a href='#'><FontAwesomeIcon icon={faMailForward}/> Visitar sitio</a>
+                    <a href={urlPage} target='_blank'><FontAwesomeIcon icon={faMailForward}/> Visitar sitio</a>
                 </div>
                 
             </div>
