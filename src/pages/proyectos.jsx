@@ -33,13 +33,12 @@ export default function ProyectosPage() {
     }, 1000);
   };
 
-  // Filtering the projects based on the selected tag
   const filteredProjects = selectedTag
     ? projectList.filter((project) => project.tags.includes(selectedTag))
     : projectList;
 
   return (
-    <div className='page'>
+    <div className='page' style={pageStyles}>
       <NavBar />
       <h1 className='page__title'>Proyectos</h1>
       <div style={{ display: 'flex', width: '100%' }}>
@@ -56,19 +55,24 @@ export default function ProyectosPage() {
             </select>
           </div>
         </div>
-        <div style={{ flex: '90%' }}>
+        <div style={{ flex: '90%', minHeight: '26vh', margin: '0' }}>
           {loading ? (
-            <div className="loading-overlay">
+            <div className="loading-overlay" style={{ height: '20rem' }}>
               <div className="loading-text">Buscando...</div>
             </div>
           ) : (
-            // Render the filtered projects
             projectShow(filteredProjects)
           )}
         </div>
         <div style={{ flex: '5%' }}></div>
       </div>
-      <Footer/>
+      <Footer style={{marginTop:"auto"}}/>
     </div>
   );
+}
+
+const pageStyles = {
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh',
 }

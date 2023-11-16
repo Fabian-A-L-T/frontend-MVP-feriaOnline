@@ -4,6 +4,7 @@
     background-color: #505050;
     flex-basis: auto;
     color: white;
+    flex-shrink: 0;
 }
 
 .footer-container div {
@@ -22,7 +23,6 @@
     max-width: 100%;
     height: auto;
     padding: 0.4rem 0 0.4rem 0;
-
 }
 
 .contact-footer-container p {

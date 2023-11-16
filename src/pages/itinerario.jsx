@@ -89,9 +89,9 @@ const ItinerarioPage = () => {
         </select>
         </div>
       </div>
-        <div style={{ flex: '80%' }}>
+      <div style={{ flex: '80%', minHeight: '26vh', margin: '0' }}>
         {loading ? (
-            <div className="loading-overlay">
+            <div className="loading-overlay" style={{ height: '20rem' }}>
             <div className="loading-text">Buscando...</div>
           </div>
           ) : (
