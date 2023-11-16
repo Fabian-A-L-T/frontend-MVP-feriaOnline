@@ -11,7 +11,7 @@ export const ProjectContainer = ({softwareName, teamName, category, tags, img, c
     return (
         <div className='project-container'>
             <div className='project-container-video'>
-                <iframe width={'auto'} height={'100%'} src={urlVideo} title="YouTube video player" frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width={'auto'} height={'100%'} src={urlVideo} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullscreen="allowfullscreen"></iframe>
             </div>
             <div className='project-container-info'>
                 <div className='project-container__names'>
