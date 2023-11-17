@@ -1,6 +1,7 @@
 import { faMailForward, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export const ProjectContainer = ({softwareName, teamName, category, tags, img, counter, urlPage, urlVideo}) => {
@@ -38,7 +39,9 @@ export const ProjectContainer = ({softwareName, teamName, category, tags, img, c
                     :   
                         <button onClick={() => {setFavCounter(favCounter => favCounter - 1); setFlag(true);counter -=1}} ><FontAwesomeIcon icon={faThumbsUp} color='#0062d9'/> {favCounter}</button>
                     }
-                    <a href={urlPage} target='_blank'><FontAwesomeIcon icon={faMailForward}/> Visitar sitio</a>
+                    <Link to={`/proyectPage/${softwareName}`}>
+                    <FontAwesomeIcon icon={faMailForward} /> Visitar sitio
+                    </Link>
                 </div>
                 
             </div>

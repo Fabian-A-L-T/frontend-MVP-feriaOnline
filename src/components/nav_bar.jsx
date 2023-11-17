@@ -29,6 +29,12 @@ export const NavBar = () => {
         >
           <p>Transmision</p>
         </NavLink>
+        <NavLink
+          className={({ isActive }) => `nav-bar__right-links ${isActive ? 'nav-bar__right-links--active' : ''}`}
+          to='/proyectPage'
+        >
+          <p>ProyectTest</p>
+        </NavLink>
       
     </nav>
   )

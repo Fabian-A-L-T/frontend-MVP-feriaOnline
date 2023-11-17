@@ -28,7 +28,10 @@
             "img": "/tidesense.png",
             "favCounter": 28,
             "urlPage": "//tidesense.feriadesoftware.cl/",
-            "urlVideo": "//www.youtube.com/embed/K-lMxQ8zgOA?si=JTT7W3OuGIuaSOk0"
+            "urlVideo": "//www.youtube.com/embed/K-lMxQ8zgOA?si=JTT7W3OuGIuaSOk0",
+            "descripcion": "Proyecto que busca advertir de las mareas rojas en las costas de Chile, mediante el uso de Boyas y Machine Learning.",
+            "insta":"https://www.instagram.com/tidesense.fesw/",
+            "facebook": "https://www.facebook.com/people/TechKi-TideSense/pfbid0L7xSYigPSeYszP7NJbihV7UeoUiS4FaY39w5B6jXkitgKhcSLUusF9Hgzzfh2PsTl/"
         },
         {
             "softwareName": "AR-GO",
